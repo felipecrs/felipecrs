@@ -21,6 +21,7 @@ jobs:
           config_timezone: America/Sao_Paulo
           retries: 3
           retries_delay: 300
+          repositories_batch: 5
           use_prebuilt_image: yes # faster execution
 
           # base
