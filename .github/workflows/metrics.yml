@@ -28,7 +28,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           repositories_forks: no
           repositories_affiliations: owner, collaborator
-          repositories_skipped: felipecrs/felipecrs, github/copilot-preview
+          repositories_skipped: felipecrs/felipecrs, github/copilot-preview, twpayne/chezmoi
 
           # The isocalendar plugin displays an isometric view of your commits calendar, along with a few additional stats like current streak and commit average per day.
           plugin_isocalendar: yes
