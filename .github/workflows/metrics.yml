@@ -20,12 +20,15 @@ jobs:
           retries_delay: 300
           repositories_batch: 5
           use_prebuilt_image: yes
+          optimize: css, xml, svg
+          experimental_features: --optimize-svg
+          verify: true
+          notice_releases: no
 
           base: header, activity, community, repositories, metadata
           base_indepth: yes
           repositories_forks: no
           repositories_affiliations: owner
-          repositories_skipped: felipecrs/felipecrs
           users_ignored: github-actions[bot], dependabot[bot], dependabot-preview[bot], actions-user, action@github.com, renovate[bot]
 
           plugin_traffic: yes
@@ -42,7 +45,7 @@ jobs:
           plugin_languages: yes
           plugin_languages_ignored: c, c++, c#, java, dockerfile
           plugin_languages_aliases: renderscript:Rust
-          plugin_languages_details: lines, percentage
+          plugin_languages_details: bytes-size, percentage
           plugin_languages_threshold: 2%
           plugin_languages_sections: most-used, recently-used
 
@@ -50,9 +53,11 @@ jobs:
           plugin_notable_indepth: yes
           plugin_notable_filter: stars:>500
           plugin_notable_from: all
+          plugin_notable_repositories: yes
           plugin_notable_types: commit, pull_request
 
           plugin_stargazers: yes
+          plugin_stargazers_days: 0
  
           plugin_reactions: yes
           plugin_reactions_details: count
