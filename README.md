@@ -1,1 +1,1 @@
-![felipecrs’ Github Metrics](https://github.com/felipecrs/felipecrs/blob/main/github-metrics.svg)
+![Felipe Santos’ Github Metrics](./github-metrics.svg)
