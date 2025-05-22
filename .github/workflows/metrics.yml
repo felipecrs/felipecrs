@@ -34,13 +34,12 @@ jobs:
           plugin_lines_delay: 30
 
           plugin_repositories: yes
-          plugin_repositories_featured: volume-locker, netdata-hass-addon, openwrt-dns-watchdog
+          plugin_repositories_featured: volume-locker, openwrt-dns-watchdog
 
           plugin_followup: yes
           plugin_followup_sections: user
 
           plugin_languages: yes
-          plugin_languages_limit: 4
           plugin_languages_ignored: c, c++, c#, java, dockerfile
           plugin_languages_aliases: renderscript:Rust
           plugin_languages_details: lines, percentage
@@ -48,15 +47,12 @@ jobs:
           plugin_languages_sections: most-used, recently-used
 
           plugin_notable: yes
-          plugin_notable_filter: stars:>50
+          plugin_notable_indepth: yes
+          plugin_notable_filter: stars:>500
           plugin_notable_from: all
-          plugin_notable_types: commit, pull_request, issue
-
-          plugin_calendar: yes
-          plugin_calendar_limit: 2
+          plugin_notable_types: commit, pull_request
 
           plugin_stargazers: yes
-          plugin_stargazers_days: 0
  
           plugin_reactions: yes
           plugin_reactions_details: count
