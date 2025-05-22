@@ -48,8 +48,6 @@ jobs:
           plugin_notable: yes
           plugin_notable_filter: stars:>100
           plugin_notable_types: commit, pull_request
-
-          plugin_stargazers: yes
  
           plugin_reactions: yes
           plugin_reactions_details: count
