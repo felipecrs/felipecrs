@@ -22,17 +22,13 @@ jobs:
           use_prebuilt_image: yes
           optimize: css, xml, svg
           experimental_features: --optimize-svg
-          verify: true
           notice_releases: no
 
-          base: header, activity, community, repositories, metadata
           base_indepth: yes
-          repositories_forks: no
-          repositories_affiliations: owner
-          users_ignored: github-actions[bot], dependabot[bot], dependabot-preview[bot], actions-user, action@github.com, renovate[bot]
+          users_ignored: github-actions[bot], dependabot[bot], dependabot-preview[bot], actions-user, action@github.com, renovate[bot] # default list plus renovate
 
           plugin_traffic: yes
-          
+
           plugin_lines: yes
           plugin_lines_delay: 30
 
@@ -50,14 +46,11 @@ jobs:
           plugin_languages_sections: most-used, recently-used
 
           plugin_notable: yes
-          plugin_notable_indepth: yes
           plugin_notable_filter: stars:>500
           plugin_notable_from: all
-          plugin_notable_repositories: yes
           plugin_notable_types: commit, pull_request
 
           plugin_stargazers: yes
-          plugin_stargazers_days: 0
  
           plugin_reactions: yes
           plugin_reactions_details: count
