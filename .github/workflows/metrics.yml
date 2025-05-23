@@ -22,7 +22,7 @@ jobs:
           notice_releases: no
           retries: 3
           retries_delay: 300
-          config_padding: 0, 10
+          config_padding: 0, 10 + 8%
           optimize: css, xml, svg
           experimental_features: --optimize-svg
 
@@ -53,6 +53,11 @@ jobs:
           plugin_notable_from: all
           plugin_notable_filter: stars:>500
           plugin_notable_types: commit, pull_request
+          plugin_notable_skipped: |
+            winfsp/sshfs-win
+            keesschollaart81/vscode-home-assistant
+            blakeblackshear/frigate-hass-integration
+            xZetsubou/hass-localtuya
  
           plugin_stargazers: yes
 
