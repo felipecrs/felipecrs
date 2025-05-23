@@ -1,7 +1,7 @@
 name: metrics
 on:
-  # Schedule updates (00:30 && 12:30 UTC daily)
-  schedule: [{ cron: "30 0,12 * * *" }]
+  # Run every day at 00:30 and 12:30 America/Sao_Paulo
+  schedule: [{ cron: "30 3,15 * * *" }]
   workflow_dispatch:
   push: {branches: ["master"]}
 jobs:
@@ -26,6 +26,7 @@ jobs:
           optimize: css, xml, svg
           experimental_features: --optimize-svg
 
+          base: header, activity, community, repositories # removed metadata
           base_indepth: yes
           repositories: 500
           repositories_batch: 50
