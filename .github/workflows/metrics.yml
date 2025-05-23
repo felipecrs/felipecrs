@@ -22,11 +22,12 @@ jobs:
           notice_releases: no
           retries: 3
           retries_delay: 300
+          config_padding: 0, 10
           optimize: css, xml, svg
           experimental_features: --optimize-svg
 
           base_indepth: yes
-          repositories: 300
+          repositories: 500
           repositories_batch: 50
           users_ignored: github-actions[bot], dependabot[bot], dependabot-preview[bot], actions-user, action@github.com, renovate[bot] # default list plus renovate
 
@@ -50,8 +51,10 @@ jobs:
 
           plugin_notable: yes
           plugin_notable_from: all
-          plugin_notable_filter: stars:>100
+          plugin_notable_filter: stars:>500
           plugin_notable_types: commit, pull_request
  
+          plugin_stargazers: yes
+
           plugin_reactions: yes
           plugin_reactions_details: count
