@@ -18,21 +18,19 @@ jobs:
           template: classic
           config_gemoji: yes
           config_timezone: America/Sao_Paulo
+          use_prebuilt_image: yes
+          notice_releases: no
           retries: 3
           retries_delay: 300
-          repositories_batch: 5
-          use_prebuilt_image: yes
           optimize: css, xml, svg
           experimental_features: --optimize-svg
-          notice_releases: no
 
           base_indepth: yes
+          repositories: 300
+          repositories_batch: 50
           users_ignored: github-actions[bot], dependabot[bot], dependabot-preview[bot], actions-user, action@github.com, renovate[bot] # default list plus renovate
 
           plugin_traffic: yes
-
-          plugin_lines: yes
-          plugin_lines_delay: 30
 
           plugin_repositories: yes
           plugin_repositories_featured: volume-locker, openwrt-dns-watchdog
