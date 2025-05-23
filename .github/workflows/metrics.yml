@@ -8,7 +8,7 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@refs/pull/1723/merge # https://github.com/lowlighter/metrics/pull/1723
+      - uses: felipecrs/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -18,7 +18,7 @@ jobs:
           template: classic
           config_gemoji: yes
           config_timezone: America/Sao_Paulo
-          use_prebuilt_image: no # https://github.com/lowlighter/metrics/pull/1723
+          use_prebuilt_image: no # using my fork instead
           notice_releases: no
           retries: 3
           retries_delay: 300
