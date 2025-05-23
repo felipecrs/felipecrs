@@ -1,14 +1,14 @@
-name: Metrics
+name: metrics
 on:
   # Schedule updates (00:30 && 12:30 UTC daily)
   schedule: [{ cron: "30 0,12 * * *" }]
   workflow_dispatch:
   push: {branches: ["master"]}
 jobs:
-  github-metrics:
+  metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@refs/pull/1723/merge # https://github.com/lowlighter/metrics/pull/1723
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -18,7 +18,7 @@ jobs:
           template: classic
           config_gemoji: yes
           config_timezone: America/Sao_Paulo
-          use_prebuilt_image: yes
+          use_prebuilt_image: no # https://github.com/lowlighter/metrics/pull/1723
           notice_releases: no
           retries: 3
           retries_delay: 300
@@ -31,6 +31,9 @@ jobs:
           users_ignored: github-actions[bot], dependabot[bot], dependabot-preview[bot], actions-user, action@github.com, renovate[bot] # default list plus renovate
 
           plugin_traffic: yes
+
+          plugin_lines: yes
+          plugin_lines_delay: 30
 
           plugin_repositories: yes
           plugin_repositories_featured: volume-locker, openwrt-dns-watchdog
@@ -46,6 +49,7 @@ jobs:
           plugin_languages_sections: most-used, recently-used
 
           plugin_notable: yes
+          plugin_notable_from: all
           plugin_notable_filter: stars:>100
           plugin_notable_types: commit, pull_request
  
