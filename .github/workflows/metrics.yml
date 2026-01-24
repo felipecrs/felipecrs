@@ -12,13 +12,13 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          debug: yes
+          # debug: yes
 
           user: felipecrs
           template: classic
           config_gemoji: yes
           config_timezone: America/Sao_Paulo
-          use_prebuilt_image: no # using my fork instead
+          use_prebuilt_image: yes # will use https://ghcr.io/felipecrs/metrics
           notice_releases: no
           retries: 3
           retries_delay: 300
