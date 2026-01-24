@@ -12,7 +12,7 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # debug: yes
+          debug: yes
 
           user: felipecrs
           template: classic
