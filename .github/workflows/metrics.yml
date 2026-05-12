@@ -11,8 +11,8 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      # https://github.com/gh-metrics/metrics/pull/22
-      - uses: gh-metrics/metrics@3693776995ed995f72cad3934a210c4387162c4e
+      # https://github.com/gh-metrics/metrics/pull/43
+      - uses: gh-metrics/metrics@refs/pull/43/merge
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
