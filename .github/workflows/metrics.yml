@@ -1,8 +1,8 @@
 name: metrics
 on:
   schedule:
-    # Run every day at 00:30 and 12:30 America/Sao_Paulo
-    - cron: 30 3,15 * * *
+    - cron: 30 0 * * *
+      timezone: America/Sao_Paulo
   workflow_dispatch:
   push:
     branches:
