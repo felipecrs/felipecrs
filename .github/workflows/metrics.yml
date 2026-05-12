@@ -11,7 +11,7 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: felipecrs/metrics@00e607085a8f1c2f72d09d45b550c37a344102ca
+      - uses: felipecrs/metrics@62b096fac61ac5f519d466f8b958afebe2e1aeb6
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
