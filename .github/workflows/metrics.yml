@@ -8,7 +8,8 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: gh-metrics/metrics@44d1cb79e207421a78b6e02d21f3c3d80829184f
+      # https://github.com/gh-metrics/metrics/pull/22
+      - uses: gh-metrics/metrics@3693776995ed995f72cad3934a210c4387162c4e
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
