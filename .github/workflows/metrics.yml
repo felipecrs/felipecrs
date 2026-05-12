@@ -8,7 +8,7 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: felipecrs/metrics@master
+      - uses: gh-metrics/metrics@44d1cb79e207421a78b6e02d21f3c3d80829184f
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
