@@ -17,6 +17,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
 
           debug: yes
+          plugins_errors_fatal: true
 
           user: felipecrs
           template: classic
