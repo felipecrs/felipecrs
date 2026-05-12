@@ -1,14 +1,17 @@
 name: metrics
 on:
-  # Run every day at 00:30 and 12:30 America/Sao_Paulo
-  schedule: [{ cron: "30 3,15 * * *" }]
+  schedule:
+    # Run every day at 00:30 and 12:30 America/Sao_Paulo
+    - cron: 30 3,15 * * *
   workflow_dispatch:
-  push: {branches: ["master"]}
+  push:
+    branches:
+      - master
 jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: felipecrs/metrics@0e3a46a96e58f8a93137c0f54935d998de046f46
+      - uses: felipecrs/metrics@00e607085a8f1c2f72d09d45b550c37a344102ca
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
@@ -59,7 +62,7 @@ jobs:
             keesschollaart81/vscode-home-assistant
             blakeblackshear/frigate-hass-integration
             xZetsubou/hass-localtuya
- 
+
           plugin_stargazers: yes
 
           plugin_reactions: yes
